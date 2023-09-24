@@ -55,6 +55,7 @@ jobs:
         run: |
           pytest tests --cov=smol --cov-report=xml
 
+      - uses: actions/checkout@v4
       - if: matrix.python_version == '3.11'
         name: codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1
